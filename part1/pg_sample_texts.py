@@ -23,7 +23,6 @@ Language: English
 
 
 *** START OF THIS PROJECT GUTENBERG EBOOK THE DIVINE COMEDY, COMPLETE ***
-[...]
 His glory, by whose might all things are mov'd,
 Pierces the universe, and in one part
 [...]

@@ -10,11 +10,14 @@ illustrator_search = re.compile(r'(illustrator:\s*)(?P<illustrator>.*)', re.IGNO
 translator_search = re.compile(r'(translator:\s*)(?P<translator>.*)', re.IGNORECASE)
 
 # searches is a dictionary with key of 'search' and value of 'pattern'
+# ??? how do you determine the use of a dictionary rather than a list?
 searches = {}
 
 # get user inputs for keyword searches
 for kw in sys.argv[1:]:
 	searches[kw] = re.compile(r'\b' + kw + r'\b', re.IGNORECASE)
+# ??? why doesn't this work? >
+# searches[kw] = re.compile(r'(?:.*\*\*\*\s*START.*)' + r'\b' + kw + r'\b' + r'(?:.*\*\*\*\s*END.*)', re.IGNORECASE)
 
 for i, doc in enumerate(documents):
 	title = re.search(title_search, doc).group('title')
